@@ -1,5 +1,5 @@
 .topnav {
-  margin-top: 15px;
+  background-color: rgba(0, 13, 17, 0.247);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -38,7 +38,11 @@
   color: #fff;
   text-align: center;
 }
+.topnav .humberger .mySidebar .sign-in:hover {
+  color: chartreuse;
+}
 .topnav .humberger .mySidebar .sidebarMenu {
+  margin-top: 10px;
   margin-left: 10px;
   font-size: smaller;
 }

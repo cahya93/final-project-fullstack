@@ -6,10 +6,13 @@
  */
 
 .menu {
-  background-color: #c8c6c6;
+  background-color: #ffffff;
   font-size: large;
   padding: 10px 15px;
   border-radius: 10px;
   margin-right: 10px;
   cursor: pointer;
+}
+.menu:hover {
+  background-color: chartreuse;
 }
