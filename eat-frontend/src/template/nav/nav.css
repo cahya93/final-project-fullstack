@@ -1,0 +1,56 @@
+.topnav {
+  margin-top: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.topnav .humberger {
+  padding: 0 10px;
+  display: flex;
+  flex: 0.1;
+  justify-content: center;
+  align-items: center;
+}
+.topnav .humberger .mySidebar {
+  /* flex: 1; */
+  animation: infinite;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  flex-direction: column;
+}
+.topnav .humberger .mySidebar .close {
+  border-radius: 100%;
+  float: inline-end;
+  margin-right: 10px;
+  background-color: red;
+}
+.topnav .humberger .mySidebar .sign-in {
+  margin: 10%;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+}
+.topnav .humberger .mySidebar .sidebarMenu {
+  margin-left: 10px;
+  font-size: smaller;
+}
+.topnav .humberger .mySidebar .sidebarMenu:hover {
+  color: chartreuse;
+}
+.topnav .logo {
+  flex: 2;
+}
+.topnav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

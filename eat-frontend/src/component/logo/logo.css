@@ -1,0 +1,7 @@
+.logo {
+  cursor: pointer;
+}
+.logo span img {
+  width: 150px;
+  position: relative;
+}

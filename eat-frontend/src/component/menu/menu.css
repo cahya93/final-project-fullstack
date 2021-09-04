@@ -1,0 +1,15 @@
+/**
+ * Author @Eko_cahyanto
+ * Siswa @G2_Academy
+ * Batch @April2021
+ * Tutor @Wawan_Setyawan
+ */
+
+.menu {
+  background-color: #c8c6c6;
+  font-size: large;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}

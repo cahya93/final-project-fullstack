@@ -5,8 +5,15 @@ class indexApp extends Component {
     super(props);
     this.state = {};
   }
+
   render() {
-    return <App />;
+    return (
+      <>
+        <div>
+          <App />
+        </div>
+      </>
+    );
   }
 }
 

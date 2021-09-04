@@ -4,24 +4,21 @@
  * Batch @April2021
  * Tutor @Wawan_Setyawan
  */
-
-import { Nav, Body, Footer } from "./template";
+import "./menu.css";
 import React, { Component } from "react";
-class App extends Component {
+class menu extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
   render() {
+    const { children, redirect } = this.props;
     return (
-      <>
-        <Nav />
-        <Body />
-        <Footer />
-      </>
+      <div className={`menu`} onClick={redirect}>
+        {children}
+      </div>
     );
   }
 }
 
-export default App;
+export default menu;
