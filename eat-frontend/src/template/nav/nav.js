@@ -5,22 +5,19 @@
  * Tutor @Wawan_Setyawan
  */
 
-import { Nav, Body, Footer } from "./template";
 import React, { Component } from "react";
-class App extends Component {
+class nav extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
     return (
-      <>
-        <Nav />
-        <Body />
-        <Footer />
-      </>
+      <div>
+        <p>ini nav</p>
+      </div>
     );
   }
 }
 
-export default App;
+export default nav;
