@@ -1,16 +1,16 @@
-.body {
+.app {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+}
+.app .nav {
   display: flex;
   flex: 1;
-  flex-direction: row;
 }
-.body .mySidebar {
-  flex: 0.1;
-  background-color: rgb(255, 240, 240);
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-}
-.body .konten {
+.app .konten {
   flex: 2;
+}
+.app .footer {
+  display: flex;
+  flex-direction: 1;
 }

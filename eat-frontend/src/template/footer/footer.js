@@ -4,7 +4,7 @@
  * Batch @April2021
  * Tutor @Wawan_Setyawan
  */
-
+import "./footer.css";
 import React, { Component } from "react";
 class footer extends Component {
   constructor(props) {
@@ -13,8 +13,8 @@ class footer extends Component {
   }
   render() {
     return (
-      <div>
-        <p>ini footer</p>
+      <div className="footer">
+        Copyright © <a href="."> yantodev.com</a> 2021
       </div>
     );
   }
