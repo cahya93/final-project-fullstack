@@ -89,7 +89,7 @@ public class EatsController {
 		} catch (Exception e) {
 			System.out.println("error = " + e);
 		}
-//		restApiSend.updateOrder(new Gson().toJson(payment)); //Update tbl_order_sementar
+//		restApiSend.updateOrder(new Gson().toJson(payment)); //Update tbl_order_sementara
 		return new ResponseEntity<>(payment, HttpStatus.OK);
 	}
 }
