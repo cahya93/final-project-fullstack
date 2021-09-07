@@ -1,0 +1,23 @@
+.kategori {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.kategori .konten {
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.377);
+  border-radius: 20px;
+}
+.kategori .konten:hover {
+  transform: translateY(-1rem);
+}
+.kategori .konten img {
+  width: 250px;
+  border-radius: 20px;
+}
+.kategori .konten .title {
+  font-size: larger;
+  text-align: center;
+}

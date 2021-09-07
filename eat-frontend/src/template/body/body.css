@@ -1,0 +1,11 @@
+.konten {
+  background-color: rgba(252, 252, 252, 0.541);
+}
+.konten .judul {
+  margin-top: 10px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
