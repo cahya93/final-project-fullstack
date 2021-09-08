@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Alert } from "react-native";
-import { Header } from "react-native-elements/dist/header/Header";
-import Icon from "react-native-vector-icons/FontAwesome";
+import React, {Component} from 'react';
+import {Alert} from 'react-native';
+import {Header} from 'react-native-elements/dist/header/Header';
+import Icon from 'react-native-vector-icons/FontAwesome';
 class header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Whatsapp",
+      title: 'Whatsapp',
     };
   }
 
@@ -16,10 +16,10 @@ class header extends Component {
         backgroundColor="green"
         centerComponent={{
           text: this.state.title,
-          style: { color: "#fff", fontSize: 20 },
+          style: {color: '#fff', fontSize: 20},
         }}
         containerStyle={{
-          backgroundColor: "green",
+          backgroundColor: 'green',
         }}
         rightComponent={
           <Icon

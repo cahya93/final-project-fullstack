@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, ImageBackground, ActivityIndicator} from 'react-native';
-
 export default class Splash extends React.Component {
   componentDidMount = () => {
     setTimeout(() => {
@@ -11,7 +10,6 @@ export default class Splash extends React.Component {
   render() {
     return (
       <>
-        {/* <Header /> */}
         <ImageBackground
           source={require('../../assets/images/splash.png')}
           style={styles.backgroundImage}>
@@ -19,7 +17,7 @@ export default class Splash extends React.Component {
             animating={true}
             color="#ffffff"
             size="large"
-            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
+            style={styles.activeIndicator}
           />
         </ImageBackground>
       </>
@@ -31,5 +29,10 @@ let styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     resizeMode: 'cover', // or 'stretch'
+  },
+  activeIndicator: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

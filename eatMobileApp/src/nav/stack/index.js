@@ -14,7 +14,7 @@ class index extends Component {
     return (
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Splash"
+        initialRouteName="Main"
         // initialRouteName="Login"
       >
         <Stack.Screen name="Login" children={props => <Login {...props} />} />
