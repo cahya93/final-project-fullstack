@@ -14,3 +14,11 @@
   color: green;
   cursor: pointer;
 }
+.footer .footer__fixed {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 116px;
+  max-width: 962px;
+  bottom: 0;
+}

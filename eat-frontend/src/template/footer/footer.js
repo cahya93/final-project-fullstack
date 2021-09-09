@@ -13,9 +13,11 @@ class footer extends Component {
   }
   render() {
     return (
-      <div className="footer">
-        Copyright © <a href="."> yantodev.com</a> 2021
-      </div>
+      <footer className="footer">
+        <div className="footer_fixed">
+          Copyright © <a href="."> yantodev.com</a> 2021
+        </div>
+      </footer>
     );
   }
 }
