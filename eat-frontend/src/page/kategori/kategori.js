@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import "./kategori.css";
+import {
+  ImageKategori as Image,
+  TitleKatgeori as Title,
+} from "../../component";
 class kategori extends Component {
   constructor(props) {
     super(props);
@@ -22,8 +25,8 @@ class kategori extends Component {
       <>
         {data.map((item, idx) => (
           <div className="konten" key={idx} onClick={() => alert(item.title)}>
-            <img src={item.img} alt={item.title} />
-            <div className="title">{item.title}</div>
+            <Image image={item.img} alt={item.title} />
+            <Title>{item.title}</Title>
           </div>
         ))}
       </>
