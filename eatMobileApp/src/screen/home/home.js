@@ -10,6 +10,7 @@ import {
 import {Card} from 'react-native-elements';
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/Entypo';
+import {Header, Title} from '../../../component/home';
 import ApiBackend from '../../../service/api';
 
 class home extends Component {
@@ -46,7 +47,7 @@ class home extends Component {
           PlaceholderContent={
             <ActivityIndicator animating={true} color="#ffffff" size="large" />
           }></Card.Image>
-        <Card.Title style={{fontSize: 25, marginTop: 10}}>
+        <Card.Title style={{fontSize: 20, marginTop: 10}}>
           {item.item.menu}
         </Card.Title>
         <Card.Title>{this.convertRp(item.item.price)}</Card.Title>
@@ -56,38 +57,8 @@ class home extends Component {
   render() {
     return (
       <SafeAreaView style={{flex: 1}}>
-        <View style={styles.header}>
-          <View style={styles.headerIcon}>
-            <Icon
-              style={{marginTop: 0}}
-              size={25}
-              color={'green'}
-              name="location"
-            />
-          </View>
-          <View style={styles.headerLocation}>
-            <Text>Your Location</Text>
-          </View>
-          <View style={styles.headerSetting}>
-            <Icon
-              style={{marginTop: 0}}
-              size={25}
-              color={'green'}
-              name="shopping-cart"
-            />
-          </View>
-        </View>
-        <View>
-          <Text
-            style={{
-              fontSize: 20,
-              justifyContent: 'center',
-              alignContent: 'center',
-              textAlign: 'center',
-            }}>
-            Today's discount
-          </Text>
-        </View>
+        <Header />
+        <Title>Today's Promo</Title>
         <View style={{flex: 1, flexDirection: 'row'}}>
           <Carousel
             layout={'default'}
@@ -103,28 +74,4 @@ class home extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: 'row',
-    borderWidth: 1,
-    padding: 5,
-  },
-  headerIcon: {
-    paddingLeft: 5,
-    flex: 0.1,
-  },
-  headerLocation: {
-    flex: 0.8,
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'baseline',
-  },
-  headerSetting: {
-    flex: 0.1,
-    justifyContent: 'flex-end',
-  },
-  contentStyle: {
-    paddingHorizontal: 16,
-  },
-});
 export default home;
