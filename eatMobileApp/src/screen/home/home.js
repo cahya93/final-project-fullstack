@@ -10,7 +10,7 @@ import {
 import {Card} from 'react-native-elements';
 import Carousel from 'react-native-snap-carousel';
 import Icon from 'react-native-vector-icons/Entypo';
-import ApiBackend from '../../../component/service/api';
+import ApiBackend from '../../../service/api';
 
 class home extends Component {
   constructor(props) {
