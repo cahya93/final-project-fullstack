@@ -4,9 +4,10 @@
  * Batch @April2021
  * Tutor @Wawan_Setyawan
  */
-import "./body.css";
+import { Title, Restaurant } from "../../component";
 import { Promo, Kategori } from "../../page";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 class body extends Component {
   constructor(props) {
     super(props);
@@ -16,18 +17,23 @@ class body extends Component {
   render() {
     return (
       <div className="konten">
-        <div className="judul">Promo Hari ini</div>
+        <Title>Promo Hari ini</Title>
         <Promo />
-        <div className="judul">Pilih Kategori</div>
+        <Title>Pilih Kategori</Title>
         <Kategori />
-        {/* <div>
-          <img src={this.state.image} alt="" />
-          <h1>Select Image</h1>
-          <input type="file" name="myImage" onChange={this.onImageChange} />
-        </div> */}
+        <Title>Pilih Restaurant</Title>
+        <Restaurant
+          action={() => alert("coba")}
+          image={
+            "https://asset-a.grid.id/crop/0x113:825x629/360x240/photo/2020/05/16/2464089360.jpg"
+          }
+          nameRM="Krusty Krab"
+        />
       </div>
     );
   }
 }
-
-export default body;
+const mapStateToProps = (state) => ({
+  getProduct: state.Product,
+});
+export default connect(mapStateToProps)(body);
