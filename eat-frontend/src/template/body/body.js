@@ -22,8 +22,13 @@ class body extends Component {
         },
         {
           image:
-            "https://production.listennotes.com/podcasts/pemadam-kelaparan-q4umBXAjsNg-pou5GSzbejP.1400x1400.jpg",
+            "https://yt3.ggpht.com/ytc/AAUvwnjPfFw2XSidVzuG7C0lVdUH_kKradd-ToC7vaIkuQ=s900-c-k-c0x00ffffff-no-rj",
           title: "Pemadam Kelaparan",
+        },
+        {
+          image:
+            "https://2.bp.blogspot.com/-SX-dSNSPX1k/WoKXKk5rxUI/AAAAAAAAABA/B-P4-O2sz8c8q1QZmqbWUKDR-CVnJw64ACEwYBhgL/s1600/IMG-20180213-WA0001.jpg",
+          title: "Geprek Pemadam Kelaparan",
         },
       ],
     };
