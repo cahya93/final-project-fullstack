@@ -29,6 +29,7 @@ public class EatsApplication {
 						.antMatchers(HttpMethod.POST, "/user/login").permitAll()
 						.antMatchers(HttpMethod.POST, "/user/registrasi").permitAll()
 						.antMatchers(HttpMethod.GET, "/eats/viewall").permitAll()
+						.antMatchers(HttpMethod.POST, "/eats/viewbylokasi").permitAll()
 						.anyRequest().authenticated();
 			}
 		}
