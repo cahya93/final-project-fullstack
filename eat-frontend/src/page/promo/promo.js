@@ -32,6 +32,7 @@ class promo extends Component {
       <>
         {items.map((item, idx) => (
           <div className="konten" key={idx} onClick={() => alert(item.menu)}>
+            <div className="promo_fixed">50%</div>
             <Image url={item.image} alt="Ikan Bakar" />
             <Title>{item.menu}</Title>
             <Price>{this.convertRp(item.price)}</Price>
