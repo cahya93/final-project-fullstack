@@ -1,0 +1,23 @@
+.restaurant {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.restaurant .konten {
+  box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.377);
+  border-radius: 25px;
+  cursor: pointer;
+}
+.restaurant .konten:hover {
+  transform: translateY(-1rem);
+}
+.restaurant img {
+  border-radius: 25px;
+  width: 250px;
+}
+.restaurant .title {
+  font-size: large;
+}
