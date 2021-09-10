@@ -17,6 +17,7 @@
 .restaurant img {
   border-radius: 25px;
   width: 250px;
+  height: 150px;
 }
 .restaurant .title {
   font-size: large;
