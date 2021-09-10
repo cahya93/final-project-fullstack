@@ -28,7 +28,7 @@
   border-radius: 25px;
   text-align: center;
   font-size: 25px;
-  position: fixed;
+  position: relative;
   font-weight: bold;
   transform: rotate(-20deg) translateX(1%) translateY(30%);
 }

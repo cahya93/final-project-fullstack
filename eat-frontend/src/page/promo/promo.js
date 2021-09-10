@@ -5,6 +5,7 @@ import {
   PricePromo as Price,
 } from "../../component";
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class promo extends Component {
   constructor(props) {
@@ -66,5 +67,7 @@ class promo extends Component {
     return <div className="promo">{this.renderItem()}</div>;
   }
 }
-
-export default promo;
+const mapStateToProps = (state) => ({
+  getProduct: state.Product,
+});
+export default connect(mapStateToProps)(promo);
