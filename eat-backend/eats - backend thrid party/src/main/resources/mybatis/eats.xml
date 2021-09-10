@@ -16,6 +16,7 @@
         <result property = "nama_rumah_makan" column = "nama_rumah_makan"/>
         <result property = "menu" column = "menu"/>
         <result property = "price" column = "price"/>
+        <result property = "image" column = "image"/>
     </resultMap>
 
     <select id = "getAll" resultMap = "result">
