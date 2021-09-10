@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping(value = "/eats")
 public class EatsController {
@@ -35,16 +35,22 @@ public class EatsController {
 	
 	//VIEW ALL DATA
 	@RequestMapping(value = "/viewall", method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<List<Data>> listAll(@RequestHeader("Authorization") String header) throws IOException {
-		String jwtToken = header.replace(PREFIX, "");
-		Claims claims = Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(jwtToken).getBody();
-		String user = claims.get("sub").toString();
+	public ResponseEntity<List<Data>> listAll() throws IOException {
+//		String jwtToken = header.replace(PREFIX, "");
+//		Claims claims = Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(jwtToken).getBody();
+//		String user = claims.get("sub").toString();
 		
 		List<Data> data = Arrays.asList(thirdPartyService.viewALL());
-		if (data.isEmpty()) {
-			return new ResponseEntity<>(data, HttpStatus.NOT_FOUND);
+		System.out.println("cek data "+data);
+		try {
+			if (data.isEmpty()) {
+				return new ResponseEntity<>(data, HttpStatus.NOT_FOUND);
+			}
+			return new ResponseEntity<>(data, HttpStatus.OK);
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		return new ResponseEntity<>(data, HttpStatus.OK);
+		return null;
 	}
 	
 	//VIEW DATA BY LOKASI
@@ -89,7 +95,7 @@ public class EatsController {
 		} catch (Exception e) {
 			System.out.println("error = " + e);
 		}
-//		restApiSend.updateOrder(new Gson().toJson(payment)); //Update tbl_order_sementara
+//		restApiSend.updateOrder(new Gson().toJson(payment)); //Update tbl_order_sementar
 		return new ResponseEntity<>(payment, HttpStatus.OK);
 	}
 }

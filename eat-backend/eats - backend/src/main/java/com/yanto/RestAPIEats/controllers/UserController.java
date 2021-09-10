@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.concurrent.TimeoutException;
 import java.util.stream.Collectors;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class UserController {
 	RestApiSend restApiSend = new RestApiSend();
@@ -87,7 +88,7 @@ public class UserController {
 			user.setToken(token);
 			String data = restApiReceive.AllRecieve("MessagePass");
 			if(data.equalsIgnoreCase("Success")){
-				return new ResponseEntity<>(new MessageSuccess("Please Use this Token: " + user.getToken()), HttpStatus.CREATED);
+				return new ResponseEntity<>(new MessageSuccess("Please Use this Bearer: " + user.getToken()), HttpStatus.CREATED);
 			}else{
 				return new ResponseEntity<>(new CustomErrorType("Please SignUp First"), HttpStatus.NOT_FOUND);
 			}
@@ -137,7 +138,7 @@ public class UserController {
 				.signWith(SignatureAlgorithm.HS512,
 						secretKey.getBytes()).compact();
 
-		return "Token " + token;
+		return "Bearer " + token;
 	}
 	private static void delay() {
 		try {

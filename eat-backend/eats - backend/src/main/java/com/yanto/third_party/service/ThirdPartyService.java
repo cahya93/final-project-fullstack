@@ -24,13 +24,18 @@ public class ThirdPartyService {
 	}
 	
 	public Data[] viewALL() {
-		String url = "http://localhost:8010/viewall";
-		return this.restTemplate.getForObject(url,
-				Data[].class);
+		String url = "http://192.168.2.2:8010/viewall";
+		try {
+			return this.restTemplate.getForObject(url,
+					Data[].class);
+		} catch (Exception e) {
+			System.out.println("error : " + e);
+		}
+		return new Data[0];
 	}
 	
 	public Payment createPostWithObject(Payment payment) {
-		String url = "http://localhost:8010/order";
+		String url = "http://192.168.2.2:8010/order";
 		// send POST request
 		return this.restTemplate.postForObject(url,
 				payment,
@@ -38,7 +43,7 @@ public class ThirdPartyService {
 	}
 	
 	public Lokasi[] getDataByLokasi(Lokasi lokasi) {
-		String url = "http://localhost:8010/viewbylokasi";
+		String url = "http://192.168.2.2:8010/viewbylokasi";
 		return this.restTemplate.postForObject(url, lokasi, Lokasi[].class);
 	}
 	

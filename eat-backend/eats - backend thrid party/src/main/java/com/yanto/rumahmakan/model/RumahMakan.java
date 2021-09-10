@@ -2,11 +2,10 @@ package com.yanto.rumahmakan.model;
 
 public class RumahMakan {
 	int id_lokasi;
-//	int id_rumah_makan;
-//	int id_menu;
 	String nama_rumah_makan;
 	String menu;
 	float price;
+	String image;
 	
 	//Setter Getter
 	
@@ -17,22 +16,6 @@ public class RumahMakan {
 	public void setId_lokasi(int id_lokasi) {
 		this.id_lokasi = id_lokasi;
 	}
-	
-//	public int getId_rumah_makan() {
-//		return id_rumah_makan;
-//	}
-//
-//	public void setId_rumah_makan(int id_rumah_makan) {
-//		this.id_rumah_makan = id_rumah_makan;
-//	}
-//
-//	public int getId_menu() {
-//		return id_menu;
-//	}
-//
-//	public void setId_menu(int id_menu) {
-//		this.id_menu = id_menu;
-//	}
 	
 	public String getNama_rumah_makan() {
 		return nama_rumah_makan;
@@ -57,16 +40,23 @@ public class RumahMakan {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	
-//	@Override
-//	public String toString() {
-//		return "rumahMakan{" +
-//				       "id_lokasi=" + id_lokasi +
-//				       ", id_rumah_makan=" + id_rumah_makan +
-//				       ", id_menu=" + id_menu +
-//				       ", nama_rumah_makan='" + nama_rumah_makan + '\'' +
-//				       ", menu='" + menu + '\'' +
-//				       ", price=" + price +
-//				       '}';
-//	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	@Override
+	public String toString() {
+		return "RumahMakan{" +
+				"id_lokasi=" + id_lokasi +
+				", nama_rumah_makan='" + nama_rumah_makan + '\'' +
+				", menu='" + menu + '\'' +
+				", price=" + price +
+				", image='" + image + '\'' +
+				'}';
+	}
 }

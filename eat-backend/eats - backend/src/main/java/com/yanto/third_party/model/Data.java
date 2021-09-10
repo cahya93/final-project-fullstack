@@ -6,6 +6,7 @@ public class Data {
 	String nama_rumah_makan;
 	String menu;
 	float price;
+	String image;
 	
 	//Setter Getter
 	
@@ -40,7 +41,15 @@ public class Data {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	@Override
 	public String toString() {
 		return "Data{" +
