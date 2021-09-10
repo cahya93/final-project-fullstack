@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import {Card} from 'react-native-elements';
 import Carousel from 'react-native-snap-carousel';
-import Icon from 'react-native-vector-icons/Entypo';
 import {Header, Title} from '../../../component/home';
 import ApiBackend from '../../../service/api';
 
