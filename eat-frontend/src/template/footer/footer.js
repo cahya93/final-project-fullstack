@@ -15,7 +15,9 @@ class footer extends Component {
     return (
       <footer className="footer">
         <div className="footer_fixed">
-          Copyright © <a href="."> yantodev.com</a> 2021
+          Copyright ©{" "}
+          <a href="https://belajarbarengyanto.wordpress.com/"> yantodev.com</a>{" "}
+          2021
         </div>
       </footer>
     );
